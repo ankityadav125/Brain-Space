@@ -1,0 +1,1001 @@
+@font-face {
+    font-family:Alight ;
+    src: url(./archia-light-webfont.ttf);
+}
+@font-face {
+    font-family:Aregular ;
+    src: url(./archia-regular-webfont.ttf);
+}
+@font-face {
+    font-family:Asemibold ;
+    src: url(./archia-semibold-webfont.ttf);
+}
+@font-face {
+    font-family:Plight ;
+    src: url(./PPNeueMontreal-Light.ttf);
+}
+@font-face {
+    font-family:Pmediam ;
+    src: url(./PPNeueMontreal-Medium.ttf);
+}
+@font-face {
+    font-family: Pregular;
+    src: url(./PPNeueMontreal-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: Alight;
+}
+
+body{
+    /* overflow-x: hidden; */
+    cursor: none;
+    background-color: white;
+}
+
+#cursor{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+    mix-blend-mode: difference;
+}
+
+nav{
+    width: 100%;
+    /* background-color:gray; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5vw 7vw;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 9;
+    color: white;
+}
+
+nav i{
+    font-size: 30px;
+    display: none;
+    color: white;
+}
+
+.right_nav{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.right_nav h4{
+    font-size: .9vw;
+    text-transform: uppercase;
+    color: #fff;
+    /* mix-blend-mode: difference; */
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+
+#page1 h1{
+    position: absolute;
+    z-index: 99;
+    font-size: 4vw;
+    bottom: 10%;
+    left: 10%;
+    color: #fff;
+    font-weight: 100;
+    /* background-color: red; */
+    width: 50%;
+    /* display: none; */
+}
+
+#page1 h1::after{
+    content:"";
+    width: 40px;
+    height: 70px;
+    background-color: #fff;
+    position: absolute;
+    animation: afterAnime .2s linear infinite;
+}
+
+#page1 h1 span{
+    display: none;
+    font-family: Alight;
+}
+
+@keyframes afterAnime {
+    100%{
+        opacity: 0;
+    }
+}
+
+#page1 video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    color: #222222;
+    background-color: #fff;
+    /* padding: 1px; */
+}
+
+h3{
+    font-size: 1.5vw;
+    /* color:#222222; */
+    font-weight: 300;
+    text-align: center;
+    margin-top: 12vw;
+    letter-spacing: 5px;
+}
+
+.page2_content{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    /* background-color: red; */
+    margin-top: 6vw;
+}
+
+.page2_left{
+    width: 50%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+}
+
+.page2_left_content{
+    width:70%;
+    height: 100%;
+    background-color: #F8F8F8;
+    background-repeat: no-repeat; 
+    margin: auto;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: 1s linear all;
+}
+
+.page2_left_content img{
+    height: 65%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-88%,-50%);
+}
+
+.page2_blur{
+    width: 50%;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.206);
+    backdrop-filter: blur(20px);
+}
+
+.page2_right,.page3_left{
+    width: 50%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+ h2{
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.4vw;
+    font-family: Plight;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+button{
+    font-family: Pregular;
+    color: #222222;
+    font-size: 18px;
+    padding: 1vw 2vw;
+    background-color: transparent;
+    border-radius: 40px;
+    letter-spacing: 1px;
+}
+
+#page3{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+}
+
+.page3_left{
+    padding: 0 0 0 5vw;
+}
+
+#page3 video{
+    width: 35%;
+    height: 50vh;
+    margin-left: 10vw;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 8vw;
+    padding-bottom: 15vw;
+    position: relative;
+}
+
+#page4 h3{
+    position: absolute;
+    text-transform: uppercase;
+    margin-top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page4_top{
+    width: 100%;
+    height: 130px;
+    margin-top: -1px;
+}
+
+.helmet{
+    width: 100%;
+}
+
+.page4_text{
+    width: 45vw;
+    height:44vh ;
+    /* background-color: red; */
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page4_content{
+    width: 85%;
+    height: 40vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    margin: 18vh auto 0 auto;
+}
+
+.page4_video{
+    width: 35%;
+    height: 100%;
+}
+
+.page4_video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page4_data{
+    width:50%;
+    height: 100%;
+}
+
+.page4_data button{
+    margin-top: 5vh;
+}
+
+.page4_data p{
+    font-size: 1.8vw;
+    font-family: Aregular;
+    line-height: 2.2vw;
+}
+span{
+    font-weight: 900;
+}
+
+#page5{
+    width: 100%;
+    /* height: 110vh; */
+    background-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1px;
+    color: #fff;
+    padding-bottom: 15vh;
+    /* overflow: scroll; */
+}
+
+#page5 h3{
+    text-transform: uppercase;
+    font-size: 1.4vw;
+    text-align: center;
+    margin-top: 15vh;
+    letter-spacing: 5px;
+}
+
+#page5 button{
+    color: #fff;
+    border-color: #fff;
+    margin-top: 4vh;
+}
+#page5 p{
+    margin-top: 2vh;
+}
+
+.page5_content{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.page5_content1{
+    width: 40vw;
+    padding:15vh 7vh 0 15vh;
+    flex-shrink: 0;
+    /* background-color: red; */
+}
+
+.page5_elems{
+    flex-shrink: 0;
+    flex-shrink: 0;
+    height: 88vh;
+    width: 40vw;
+    background-color: rgba(255, 255, 255, 0.182);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    -webkit-mask-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem-box_bg_mob.svg);
+    -webkit-mask-size: cover;
+    -webkit-mask-position: bottom;
+    -webkit-mask-repeat: no-repeat;
+    backdrop-filter: blur(30px);
+    padding:4vw;
+    margin: 0 3vw;
+    margin-top: 2vh;
+    color: #000;
+}
+
+.page5_elems img{
+    width: 99%;
+    border-radius: 20px;
+    /* margin-left: 7%; */
+}
+
+.page5_elems h2{
+    margin-top: 8vh;
+}
+
+.page5_elems p{
+    font-size: 1.2vw;
+}
+
+.aero{
+    width: 60px !important;
+    height: 40px;
+    margin-left: 90%;
+    margin-top: 15%;
+}
+
+.num{
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    z-index: 9999;
+    bottom: 2%;
+}
+
+.num1{
+    left: 45%;
+}
+.num2{
+    left: 91%;
+}
+.num3{
+    left: 137%;
+}
+
+.line{
+    width: 60vw;
+    height: 3px;
+    background-color: white;
+    margin:2vh auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.inline{
+    width: 15vw;
+    height: 3px;
+    background-color: black;
+    border-radius: 20px;
+}
+#page6{
+    width: 100%;
+    min-height: 100vh;
+    background: conic-gradient( at 50% -10%, #F1F2FF 26.2499991059deg, #d0b7ff 101.25deg, #fae0ca 243.7499928474deg, #fab4af 326.25deg);
+    padding: 8vw 7vw 0 7vw ;
+}
+
+#page6 h2{
+    font-size: 3.5vw;
+}
+
+.page6_top{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7vh;
+    padding-bottom: 18vh;
+    width: 100%;
+    /* background-color: red; */
+    border-bottom: 1px solid black;
+}
+
+.page6_top>p{
+    width: 45vw;
+    /* background-color: red; */
+    font-size: 1.8vw;
+    font-family: Aregular;
+    line-height: 2.2vw;
+}
+
+.page6_top_right{
+    width: 36vw;
+}
+
+.page6_top_right p{
+    font-size: 1.5vw;
+}
+
+.page6_top_right ol{
+    margin-top: 8vh;
+    margin-left: 5vh;
+}
+
+.page6_top_right ol li{
+    font-size: 1.4vw;
+    font-weight: 900;
+    margin-top: 2vh;
+}
+
+#page6 h3{
+    text-align: left;
+    margin-top: 10vh;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-family: Asemibold;
+}
+
+.page6_bot{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+.page6_bot_cont{
+    width: 28vw;
+    height: 80vh;
+    background-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/comp/headline-text-list_box-button-box_bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.cnt{
+    position: absolute;
+    font-size: 2.5vw;
+    top: 3vh;
+    right: 1vw;
+    font-weight: 900;
+}
+
+.page6_bot button{
+    max-width: 18vw;
+    margin: 10vh 4vw 0 4vw;
+    font-size: 2vw;
+    font-family: Aregular;
+    text-align: start;
+    padding: 2vw;
+    border: none;
+}
+
+.page6_btn1{
+    background-color: #E0DEFE;
+}
+
+.page6_btn2{
+    background-color: #C9E3F8;
+}
+
+.page6_btn3{
+    background-color: #FED7CD;
+}
+
+.page6_bot p{
+    margin: 5vh 4vw;
+    font-size: 1.2vw;
+    font-family: Aregular;
+    letter-spacing: 0px;
+    font-weight: 600;
+    color: #7f7f7f;
+}
+
+#page6>p{
+    text-align: center;
+    font-family: Aregular;
+    font-size: 1.5vw;
+    width: 50vw;
+    margin:-10vh auto;
+}
+
+#page6>button{
+    margin: 20vh 0 10vh 0;
+}
+
+.page6_img{
+    margin:0 25vw -.6vh 23vw;
+    width: 40vw;
+}
+
+#page7{
+    width: 100%;
+    min-height: 100vh;
+    padding:0 7vw ;
+}
+
+#page7 h3{
+    margin-top: 15vh;
+}
+
+.page7_top{
+    width: 86vw;
+    height: 35vh;
+    display: flex;
+    margin-top: 16vh;  
+
+}
+
+.page7_top_left{
+    width: 50%;
+    height: 100%; 
+    padding-right: 5vw;
+}
+
+.page7_top_left p{
+    font-size: 1.6vw;
+    margin-top: 5vh;
+}
+
+.page7_top_right{
+    width: 50%;
+    height: 100%;
+    background-image: url(https://www.brain.space/wp-content/uploads/2023/07/DASHBOARD.jpg);
+    border-radius: 20px;
+}
+
+.page7_bot1,.page7_bot2{
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 15vh;
+}
+
+.page7_bot_info{
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page7_bot_info img{
+    height: 60px;
+}
+
+.page7_bot_info p{
+    font-size: .8vw;
+    font-weight: 500;
+    font-family: Alight;
+    line-height: 1.2vw;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+
+#page7>button{
+    margin: 15vh 0 10vh 0;
+}
+
+
+#page8{
+    width: 94%;
+    margin: auto;
+    min-height: 100vh;
+    border-top-left-radius: 100px;
+    padding-bottom: 50vh;
+    position: relative;
+    background:conic-gradient(at 0 0 , #FFC3BE 0deg, #CED2FB 39.19deg, #C5E3FF 95.62deg, #BEEFF8 150.61deg, #B7F9F0 208.13deg, #F7FFC7 253.13deg, #FFE7D2 300deg, #FFD6CE 328.25deg, #FFC3BE 360deg), conic-gradient(from 176.66deg at 46.1% 33.87%, #E7E2F0 0deg, #95BFE8 39.19deg, #A3DEFF 104.7deg, #77A8F4 150.61deg, #6C89F0 210.89deg, #DAD4D4 272.3deg, #FFBBB4 314.64deg, #EFD4DB 328.25deg, #E7E2F0 360deg);
+}
+
+.page8_header_bg{
+    width: 16vw;
+    height: 16vw;
+    /* background-color: red; */
+    background-image: url(	https://www.brain.space/wp-content/themes/brain.space/assets/substracts/shape_corner_substract.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page8_circle{
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+    background-color: #000;
+    background-position: center;
+    background-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/imgs/side-shape-icons/hp_intro_side_icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page8_header h3{
+    margin-top: -20vh;
+}
+
+.page8_top{
+    width: 100%;
+    height: 40vh;
+    /* background-color: red; */
+    margin-top: 20vh;
+    display: flex;
+    padding:0 4.5vw;
+    justify-content: space-between;
+}
+
+.page8_top h2{
+    width: 35vw;
+    /* background-color: yellow; */
+}
+
+.page8_top_right{
+    width: 40vw;
+}
+
+.page8_top_right h3{
+    margin-top: 0;
+    text-align: start;
+    letter-spacing: 0px;
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+.page8_top_right p{
+    margin-top: 5vh;
+}
+
+.page8_center{
+    width:85vw;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.36);
+    backdrop-filter: blur(20px);
+    margin: auto;
+    padding: 1px 0 10vh 0;
+    border-radius: 50px;
+}
+
+.page8_center p{
+    font-size: 1.8vw;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.icons_contain{
+    width: 70vw;
+    display: flex;
+    /* align-items: center; */
+    margin: auto;
+    /* margin-top: 15vh; */
+    /* background-color: red; */
+}
+
+.icons_in{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    height: 25vh;
+    padding-left:5vw;
+    position: relative;
+}
+
+.icons_in::after{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.24);
+    bottom: 0;
+    left: 0;
+    border-radius: 100%;
+}
+
+.last::after{
+    content:"";
+    height: 0;
+}
+
+.circle {
+    width: 8vh;
+    height: 8vh;
+    /* height: 0; */
+    /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+    position: relative;
+   border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .icons_in h4{
+    margin-left: 3vw;
+    font-weight: 200;
+  }
+
+  .page8_bot{
+    width: 100%;
+    height: 80vh;
+    /* background-color: red; */
+    margin-top: 20vh;
+    display: flex;
+    padding:0 4.5vw;
+    justify-content: space-between;
+}
+
+.page8_bot_left{
+    width: 35vw;
+    height: 100%;
+    /* background-color: red; */
+}
+.page8_bot p{
+    margin: 5vh 0;
+}
+
+.page8_bot h4{
+    padding: 3vh 0;
+    border-top: .5px solid rgb(34, 34, 34);
+    font-weight: 500;
+    font-size: .8vw;
+}
+
+.page8_bot_right{
+    width: 40vw;
+    height: 100%;
+    background-image: url('https://www.brain.space/wp-content/uploads/2023/07/peripheral-sensors.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#page9{
+    width:96%;
+    height: 125vh;
+    margin: auto;
+    background: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/space-mission_bg.jpg) no-repeat center;
+    -webkit-mask-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/space-mission-box_bg.jpg.svg);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    margin-top: -25vh;
+    position: relative;
+    padding: 1px 4.5vw;
+}
+
+.page9_imgs{
+    position: absolute;
+    right: 0;
+    bottom: 10vh;
+}
+
+.page9_imgs img{
+    height: 13vh;
+}
+
+.page9_cont{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15vh;
+}
+
+.page9_left{
+    width: 35vw;
+}
+
+.page9_left p{
+    margin: 7vh 0;
+}
+
+.page9_left h5{
+    font-size: 1.7vw;
+    font-family: Plight;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.page9_right{
+    width: 40vw;
+    height: 40vh;
+    border-radius: 200px;
+}
+
+.page9_right video{
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#page10{
+    width: 100%;
+    min-height: 100vh;
+}
+
+#page10 h3{
+    margin-bottom: 15vh;
+    margin-top: 20vh;
+}
+
+.page10_images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    gap: 4vw;
+}
+
+#page10 p{
+    text-align: center;
+    margin:15vh auto 0 auto;
+    width: 40vw;
+    font-size: 1.5vw;
+    font-family: Alight;
+}
+
+#page10 button{
+    margin: 5vh 0 0 5vw;
+}
+
+#page11{
+    width: 100%;
+    height: 150vh;
+    background: conic-gradient(from 160.47deg at 31.82% 74.94%, #F5F9FA 0deg, #F9A29E 251.93deg, #7D97FC 292.77deg, #FFFFFF 360deg);
+    position: relative;
+}
+
+.page11_in{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.128);
+    backdrop-filter: blur(70px);
+    color: #fff;
+    padding: 30vh 20vw 0 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page11_left{
+    width: 35vw;
+}
+
+.page11_left p{
+    margin-top: 3vh;
+}
+
+.page11_right{
+    width: 23vw;
+}
+.page11_right input{
+    border: none;
+    width: 100%;
+    font-size: 1.5vw;
+    font-weight: 100;
+    font-family: Plight;
+    color: black;
+    padding: 1.2vw;
+    margin-top: 3vh;
+    border-radius: 20px;
+    background-color: #F0D9E2;
+}
+
+.page11_right button{
+    margin: 7vh 0 3vh 0;
+}
+
+.page11_right h6{
+    color: #000;
+    font-weight: 100;
+    font-size: .9vw;
+}
+
+.page11_right h6 span{
+    text-decoration: underline;
+}
+
+.page11_img{
+    width: 50vw;
+    height: 40vh;
+    background-image:url('https://www.brain.space/wp-content/themes/brain.space/assets/substracts/footer_substract.svg') ;
+    background-size: cover;
+    position: absolute;
+    bottom: -1vh;
+    left: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: black;
+}
+
+.page11_img p{
+    margin: 25vh 5vw;
+    font-family: Alight;
+}
+
+footer{
+    width: 100%;
+    height: 50vh;
+    padding: 0 5vw;
+}
+
+.footer_cont{
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.footer_right{
+    display: flex;
+    gap: 2vw;
+}
+
+.footer_right h4{
+    font-size: .7vw;
+}
+
+.footer_right i{
+    font-size: 1.5vw;
+}
